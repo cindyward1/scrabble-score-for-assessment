@@ -1,7 +1,7 @@
 scrabble-score
 ====================
 
-README for Pig Latin Translator
+README for Scrabble Score Calculator
 
 * Author: Cindy Ward <cindyward@yahoo.com>
 * Date created: July 13, 2014
