@@ -2,38 +2,15 @@ var scrabbleLetterScore = function (inputLetter) { // this function returns the 
 
   var inputLetterUC = inputLetter.toUpperCase(); // ensure letter is upper case for comparison
   var letterScore = 0;
+  var wordScoreDictionary = {"A":1,"B":3,"C":3,"D":2,"E":1,"F":4,"G":2,"H":4,"I":1,"J":8,"K":5,"L":1,"M":3,"N":1,"O":1,"P":3,
+                             "Q":10,"R":1,"S":1,"T":1,"U":1,"V":4,"W":4,"X":8,"Y":4,"Z":10};
 
-  switch (inputLetterUC) { // this switch statement encapsulates the Scrabble letter scoring
-    case "A":
-    case "E":
-    case "I":
-    case "O":
-    case "U":
-    case "L":
-    case "N":
-    case "R":
-    case "S":
-    case "T": letterScore = 1; break;
-    case "D":
-    case "G": letterScore = 2; break;
-    case "B":
-    case "C":
-    case "M":
-    case "P": letterScore = 3; break;
-    case "F":
-    case "H":
-    case "V":
-    case "W":
-    case "Y": letterScore = 4; break;
-    case "K": letterScore = 5; break;
-    case "J":
-    case "X": letterScore = 8; break;
-    case "Q":
-    case "Z": letterScore = 10; break;
-    default: letterScore = 0; break; // bad character input
+  letterScore = wordScoreDictionary[inputLetterUC];
+  if (!letterScore) { // inputLetter not found in validWordScoreDictionary
+    letterScore = 0; // set error condition
   };
-  
-  return letterScore;  
+
+  return letterScore;
 
 };
 
@@ -55,7 +32,7 @@ var scrabbleScore = function (inputWord) { // this function returns the score of
   };
 
   return wordScore;
-  
+
 };
 
 
@@ -79,7 +56,7 @@ $(document).ready (function ()    {
       $("input#input-word").parent().find("span").remove();
       $("input#input-word").parent().addClass("has-success has-feedback");
       $("input#input-word").parent().append("<span class=\"glyphicon glyphicon-ok form-control-feedback\"></span>");
-     
+
       inputWord = inputWord.toUpperCase(); // display output in all caps like Scrabble tiles
       $("#show-results .input-word-out").text(inputWord);
       $("#show-results .scrabble-score").text(wordScore);

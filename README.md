@@ -5,6 +5,7 @@ README for Scrabble Score Calculator
 
 * Author: Cindy Ward <cindyward@yahoo.com>
 * Date created: July 13, 2014
+* Last modification date: July 14, 2014 (branch created to use a object literal word score dictionary to replace switch statement)
 * Created for:  Epicodus, Summer 2014 session
 
 Included; written by author:
@@ -37,4 +38,4 @@ This Web application asks the user to enter a word and returns the Scrabble scor
 * 8:  J, X
 * 10: Q, Z
 
-Per the official Scrabble rules, nothing but letters can be used. Words with apostrophes and hyphens are not allowed, and a blank tile cannot be used to represent an apostrophe or a hyphen. Thus the input functionality will flag the input with a red box border, red label, and red x glyphicon. Legal input will be flagged with a green box border, green label, and green check glyphicon. 
+Per the official Scrabble rules, nothing but letters can be used. Words with apostrophes and hyphens are not allowed, and a blank tile cannot be used to represent an apostrophe or a hyphen. Thus the input functionality will flag the input with a red box border, red label, and red x glyphicon. Legal input will be flagged with a green box border, green label, and green check glyphicon.
