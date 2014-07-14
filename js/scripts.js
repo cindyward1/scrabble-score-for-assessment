@@ -40,11 +40,16 @@ var scrabbleLetterScore = function (inputLetter) {
 
 var scrabbleScore = function (inputWord) {
 
+  var inputWordArr =  inputWord.split(""); // split inputWord string into array of characters
   var wordScore = 0;
 
-  wordScore = scrabbleLetterScore(inputWord); // assume only a single letter input
+  for (var index = 0; index < inputWordArr.length; index++) {
+    alert("inputWordArr[index1] = " + inputWordArr[index]);
+    wordScore = wordScore + scrabbleLetterScore(inputWordArr[index]);
+  };
 
   return wordScore;
-
+  
 };
+
 

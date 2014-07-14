@@ -36,7 +36,5 @@ This Web application asks the user to enter a word and returns the Scrabble scor
 * 8:  J, X
 * 10: Q, Z
 
-Unresolved issues:
-*  	I didn't know how to deal with punctuation in the input. If the user enters any 
-	punctuation, it will be scored as 0 and returned in the output. This includes apostrophes in words like don't or isn't.
+Per the official Scrabble rules, words with apostrophes and hyphens are not legal, and a blank tile cannot be used to represent an apostrophe or a hyphen. Thus the input functionality will flag any input with any character(s) other than letters as illegal and ask the user to try again. 
 
