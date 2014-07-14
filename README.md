@@ -12,6 +12,7 @@ Included; written by author:
 * ./LICENSE.md (using the "Unlicense" template)
 * ./index.html
 * ./css/styles.css
+* ./data/sowpods.txt (downloaded from Web)
 * ./img/scrabble.jpg (downloaded from Web)
 * ./js/scripts.js
 * ./spec/spec-runner.html
@@ -36,5 +37,4 @@ This Web application asks the user to enter a word and returns the Scrabble scor
 * 8:  J, X
 * 10: Q, Z
 
-Per the official Scrabble rules, words with apostrophes and hyphens are not legal, and a blank tile cannot be used to represent an apostrophe or a hyphen. Thus the input functionality will flag any input with any character(s) other than letters as illegal and ask the user to try again. 
-
+Per the official Scrabble rules, nothing but letters can be used. Words with apostrophes and hyphens are not allowed, and a blank tile cannot be used to represent an apostrophe or a hyphen. Thus the input functionality will flag the input with a red box border, red label, and red x glyphicon. Legal input will be flagged with a green box border, green label, and green check glyphicon. 

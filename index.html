@@ -9,24 +9,31 @@
 </head>
 
 <body>
-  <div class="col-md-5">
-    <br><br><img src="./img/scrabble.jpg" class="photo-width">
-  </div>
-  <div class="col-md-7">
-    <br><br><h1>Scrabble Score</h1>
-    <p><b>If you input a word, the computer will return the Scrabble score.</b></p>
-    <form class="form-group" id="input-form">
-      <label for="input-word">Word for which to get Scrabble score</label>
-      <input id="#input-word" type="text" placeholder="Word" size=40><br><br>
-      <button class="btn btn-success btn-sm" type="submit">Give me the score!</button>
+  <div class="row">
+    <div class="col-md-5">
+      <br><br><img src="./img/scrabble.jpg" class="photo-width">
+    </div>
+    <div class="col-md-4">
+      <br><br><h1>Scrabble Score</h1>
+      <p><b>If you input a word, the computer will return the Scrabble score.</b><br>
+        <span class="small-type">Please note that any input except letters is not allowed, including apostrophes and hyphens.</span></p>
+      <form class="form-group" id="input-form">
+        <div class="has-feedback">
+          <label for="input-word" class="control-label">Word for which to get Scrabble score</label>
+          <input id="input-word" type="text" class="form-control" placeholder="Word" size=40><br>
+        </div>
+        <button class="btn btn-success btn-sm" type="submit">Give me the score!</button>
+      </form>
     </div>
   </div> <!-- row -->
-</form>
-<div id="show-results">
-  <div class="col-md-5">
-  </div>
-  <div class="col-md-7">
-    <h4><b>You input <span class="input-word"></span>. Its Scrabble score is<span class="scrabble-score"></span>.</h4>
+  <div class="row">
+    <div id="show-results">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-4">
+      <h4><b>You input <span class="input-word-out"></span>. Its Scrabble score is <span class="scrabble-score"></span>.</h4>
+      </div>
+    </div>
   </div>
 </body>
 </html>
