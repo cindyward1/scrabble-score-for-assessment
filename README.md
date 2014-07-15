@@ -5,7 +5,7 @@ README for Scrabble Score Calculator
 
 * Author: Cindy Ward <cindyward@yahoo.com>
 * Date created: July 13, 2014
-* Last modification date: July 14, 2014 (branch created to use a object literal word score dictionary to replace switch statement)
+* Last modification date: July 14, 2014 (branch created to use an external file as a Scrabble valid word dictionary)
 * Created for:  Epicodus, Summer 2014 session
 
 Included; written by author:

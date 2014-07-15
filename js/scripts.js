@@ -35,13 +35,26 @@ var scrabbleScore = function (inputWord) { // this function returns the score of
 
 };
 
+var readFile = function (event) {
+  var files = event.target.files;
+  var file = files[0];
+  var reader = new FileReader();
+  reader.onload = function() {
+    console.log(this.result);
+  };
+
+  reader.readAsText(file)
+
+  };
+
 
 $(document).ready (function ()    {
 
   $("form#input-form").submit (function (event) {
 
+
     var inputWord= $("input#input-word").val(); // get the word from the form
-    var wordScore = scrabbleScore(inputWord); // calculate the word score
+    var wordScore = scrabbleScore(inputWord); // calculate the word score; correctly returns 0 if !inputWord
     if (!inputWord || wordScore === 0) { // if no input or bad input, show error to user
       // the lines below show the input error by turning the input label and box border red and
       // putting a red x glyphicon at the end of the input box
@@ -57,11 +70,26 @@ $(document).ready (function ()    {
       $("input#input-word").parent().addClass("has-success has-feedback");
       $("input#input-word").parent().append("<span class=\"glyphicon glyphicon-ok form-control-feedback\"></span>");
 
+      var useFile = parseInt($("input[name="use-file"]:checked").val());
+      if (useFile) {
+        var file = document.getElementByID("./data/sowpods.txt").files[0];
+        if (file) {
+          var reader = new FileReader();
+          reader.readAsText(file,"UTF-8");
+          reader.onload = function (event) {
+            document.getElementByID ("")
+          }
+        }
+
+      }
+
       inputWord = inputWord.toUpperCase(); // display output in all caps like Scrabble tiles
       $("#show-results .input-word-out").text(inputWord);
       $("#show-results .scrabble-score").text(wordScore);
       $("#show-results").show(); // show the results; the area is initially hidden by the css
     };
+
+
 
     event.preventDefault();
 
